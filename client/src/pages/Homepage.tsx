@@ -1,3 +1,4 @@
+import Difference from "../components/Difference"
 import Features from "../components/Features"
 import Hero from "../components/Hero"
 import Teams from "../components/Teams"
@@ -8,6 +9,7 @@ const Homepage = () => {
         <Hero/>
         <Teams/>
         <Features/>
+        <Difference/>
     </div>
   )
 }
