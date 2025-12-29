@@ -1,4 +1,5 @@
 import { BadgeCheck, Play } from "lucide-react"
+import TextType from "./animation/TextType"
 
 const Hero = () => {
   return (
@@ -10,7 +11,15 @@ const Hero = () => {
                     v2.0 NOW AVAILABLE
                 </p>
             </div>
-            <h2 className="text-3xl sm:text-5xl md:text-7xl font-black max-md:text-center">RIGHT BETTER, <br /> <span className="">FASTER WITH AI</span></h2>
+            <h2 className="text-3xl sm:text-5xl md:text-7xl font-black max-md:text-center">
+                <TextType 
+                    text={["RIGHT BETTER,"]}
+                    typingSpeed={200}
+                    pauseDuration={1500}
+                    showCursor={true}
+                    cursorCharacter="|"
+                    />
+                <br /> <span className="">FASTER WITH AI</span></h2>
 
             <div>
                 <p className="text-lg sm:text-xl max-md:text-center">Instant summaries and seamless paraphrasing - all in one workspace. Experience e futureof writing assistance today.</p>
