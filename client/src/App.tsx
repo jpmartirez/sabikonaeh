@@ -4,6 +4,7 @@ import Homepage from "./pages/Homepage"
 import { useUser } from "@clerk/clerk-react"
 import SummarizePage from "./pages/SummarizePage"
 import ParaphrasePage from "./pages/ParaphrasePage"
+import { Toaster } from "react-hot-toast"
 
 const App = () => {
   const {isLoaded, user} = useUser();
@@ -14,6 +15,7 @@ const App = () => {
 
   return (
     <div className="bg-[#121022]">
+      <Toaster/>
       <Navbar/>
       <Routes>
         <Route path="/" element={user ? <SummarizePage/> : <Homepage/>}/>
