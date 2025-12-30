@@ -10,7 +10,8 @@ const Navbar = () => {
     return (
         <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-600 bg-[#121022] relative transition-all">
 
-            <a href="https://prebuiltui.com">
+            <a href="/" className="flex items-center gap-2">
+                <img src="/logo.png" alt="" width={40} />
                 <h1 className="text-white font-semibold text-lg lg:text-2xl">SabiKonaEh</h1>
             </a>
 
