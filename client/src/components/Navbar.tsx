@@ -24,12 +24,12 @@ const Navbar = () => {
 
                         <div className="flex items-center gap-3">
                             <div className="cursor-pointer px-4 md:px-8 py-1 md:py-2 bg-gray-500 hover:bg-gray-600 transition text-white rounded-full">
-                                <SignInButton>
+                                <SignInButton mode="modal">
                                     Login
                                 </SignInButton>
                             </div>
                             <div className="cursor-pointer px-4 md:px-8 py-1 md:py-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full">
-                                <SignUpButton>
+                                <SignUpButton mode="modal">
                                     Signup
                                 </SignUpButton>
                             </div>
@@ -52,13 +52,13 @@ const Navbar = () => {
                     <a href="#" className="block">Contact</a>
                     <div className="flex items-center gap-2">
                         <div className="cursor-pointer px-6 py-2 mt-2 bg-gray-500 hover:bg-gray-600 transition text-white rounded-full text-sm">
-                            <SignInButton>
+                            <SignInButton mode="modal">
                                 Login
                             </SignInButton>
                         </div >
 
                         <div className="cursor-pointer px-6 py-2 mt-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full text-sm">
-                            <SignUpButton>
+                            <SignUpButton mode="modal">
                                 Signup
                             </SignUpButton>
                         </div>

@@ -28,7 +28,6 @@ const Hero = () => {
             <div className="flex flex-col md:flex-row items-center gap-3">
                 <button className="btn btn-primary">Try for Free</button>
                 <button className="btn btn-soft flex items-center gap-2"><Play width={16}/>View Demo</button>
-
             </div>
 
             <div className="flex items-center gap-3 max-md:justify-center">
