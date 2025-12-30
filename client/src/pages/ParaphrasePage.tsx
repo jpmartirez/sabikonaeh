@@ -1,4 +1,4 @@
-import { Sparkles } from "lucide-react";
+import { Clipboard, Sparkles, Trash } from "lucide-react";
 import { useState } from "react"
 
 const ParaphrasePage = () => {
@@ -18,7 +18,7 @@ const ParaphrasePage = () => {
         </div>
 
         {/* PARAPHRASE CONFIG */}
-        <div className="flex flex-wrap items-center justify-center  md:justify-between w-full gap-5 sm:gap-7 md:gap-10 lg:gap-20 p-5 bg-base-100 border border-gray-500/70 rounded-xl ">
+        <div className="flex flex-wrap items-center justify-center  md:justify-between w-full gap-5 sm:gap-7 md:gap-10 lg:gap-20 p-5 bg-[#1A1A1E] border border-gray-500/70 rounded-xl ">
           <div className="">
             <p>Tone</p>
             <select defaultValue="Standard" className="select select-info">
@@ -32,10 +32,10 @@ const ParaphrasePage = () => {
           <div className="flex-1 flex flex-col gap-2">
               <div className="flex items-center justify-between">
                 <p className="text-sm md:text-lg">REPHRASING INTENSITY</p>
-                <p>Significant</p>
+                <div className="badge badge-outline badge-info">Significant</div>
               </div>
 
-              <input type="range" min={0} max="100" value={range} className="range range-info range-xs w-full" onChange={(e)=>setRange(e.target.value)} />
+              <input defaultValue={50} type="range" min={0} max="100" value={range} className="range range-info range-xs w-full" onChange={(e)=>setRange(e.target.value)} />
 
               <div className="flex items-center justify-between">
                 <p className="text-xs text-gray-400">Subtle</p>
@@ -51,13 +51,29 @@ const ParaphrasePage = () => {
         </div>
 
         {/* TEXT AREA */}
-        <div>
-          <div>
+        <div className="flex flex-wrap gap-20 justify-center place-items-center ">
+          <div className="bg-gray-700 max-w-2xl w-full  flex flex-col rounded-xl border border-gray-600">
+              <div className="flex justify-between bg-[#1A1A1E] p-3 rounded-md">
+                <p className="text-sm font-semibold text-[#928FC5]">ORIGINAL TEXT</p>
+                <div>
+                  <button className="text-sm font-semibold flex gap-1 items-center text-blue-800 cursor-pointer hover:text-blue-900"><Clipboard width={14}/>Paste Text</button>
+                </div>
+              </div>
+
+              <textarea placeholder="Paste or type your text here to begin rewriting..." className="textarea textarea-md w-full "></textarea>
+
+              <div className="flex items-center justify-between bg-[#1A1A1E] p-3 rounded-md">
+                <p className="text-xs text-[#928FC5]">0 / 2500 Words</p>
+                <div className="cursor-pointer hover:scale-105">
+                  <Trash width={16} className="text-[#928FC5]"/>
+                </div>
+              </div>
+
 
           </div>
 
-          <div>
-            
+          <div className="bg-gray-700 max-w-2xl w-full h-65">
+
           </div>
         </div>
 
