@@ -78,8 +78,12 @@ const SummarizePage = () => {
         Original text: "${original}"
         `;
 
-      const {data} = await axios.post('/api/openai', {prompt});
-      setsummarized(data.result);
+      try {
+        const {data} = await axios.post('/api/openai', {prompt});
+        setsummarized(data.result);
+      } catch (error) {
+        toast.error("Please try again!")
+      }
 
       isLoading(false);
 

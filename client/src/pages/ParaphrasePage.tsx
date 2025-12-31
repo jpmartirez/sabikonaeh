@@ -81,8 +81,12 @@ const ParaphrasePage = () => {
         Original text: "${original}"
         `;
 
-      const {data} = await axios.post('/api/openai', {prompt});
-      setParaphrased(data.result);
+      try {
+        const {data} = await axios.post('/api/openai', {prompt});
+        setParaphrased(data.result);
+      } catch (e) {
+        toast.error("Please try again")
+      }
 
       isLoading(false);
   }
