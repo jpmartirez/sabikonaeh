@@ -10,7 +10,7 @@ export const api = async (req, res) => {
         const client = new GoogleGenAI({});
 
         const interaction =  await client.interactions.create({
-            model: 'gemini-3-flash-preview',
+            model: 'gemini-2.5-flash',
             input: prompt,
         });
 
