@@ -50,7 +50,7 @@ const Navbar = () => {
                 </button>
 
                 {/* Mobile Menu */}
-                <div className={`${open ? 'flex' : 'hidden'} absolute top-15 left-0 w-full bg-[#121022] shadow-md py-4 flex-col items-start gap-2 px-5 text-sm sm:hidden`}>
+                <div className={`${open ? 'flex' : 'hidden'} absolute top-15 left-0 w-full bg-[#121022] shadow-md py-4 flex-col items-start gap-2 px-5 text-sm sm:hidden z-10`}>
                     <a href="/" className="block hover:text-primary">Home</a>
                     <a href="#features" className="block hover:text-primary">Features</a>
                     <a href="#contacts" className="block hover:text-primary">Contact</a>
@@ -89,7 +89,7 @@ const Navbar = () => {
                         </button>
 
                         {/* Mobile Menu */}
-                        <div className={`${open ? 'flex' : 'hidden'} absolute top-15 left-0 w-full bg-[#121022] shadow-md py-4 flex-col items-start gap-2 px-5 text-sm sm:hidden`}>
+                        <div className={`${open ? 'flex' : 'hidden'} absolute top-15 left-0 w-full bg-[#121022] shadow-md py-4 flex-col items-start gap-2 px-5 text-sm sm:hidden z-10`}>
                             <Link to={'/summarize'} className={`font-bold block ${path=="/summarize" ? "text-primary" : ""}`}>Summarize</Link>
                             <Link to={'/paraphrase'} className={`font-bold block ${path=="/paraphrase" ? "text-primary" : ""}`}>Paraphrase</Link>
                       
