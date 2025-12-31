@@ -4,11 +4,11 @@ const Footer = () => {
   return (
     <footer className="footer footer-horizontal footer-center bg-[#121022] text-primary-content p-10" id="contacts">
       <aside>
-        <img src="/logo.png" alt="" width={64}/>
+        <a href="/"><img className="cursor-pointer" src="/logo.png" alt="" width={64}/></a>
         <p className="font-bold text-xl">
           SabiKonaEh
           <br />
-          Providing reliable tech since 1992
+          <span className="text-gray-400">Simplifying text, amplifying meaning.</span>
         </p>
         <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
       </aside>

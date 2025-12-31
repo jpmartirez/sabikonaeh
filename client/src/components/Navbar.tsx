@@ -22,9 +22,9 @@ const Navbar = () => {
             {!user? (
                 <div>
                     <div className="hidden sm:flex items-center gap-8">
-                        <a href="/">Home</a>
-                        <a href="#features">Features</a>
-                        <a href="#contacts">Contact</a>
+                        <a href="/" className="hover:text-primary">Home</a>
+                        <a href="#features" className="hover:text-primary">Features</a>
+                        <a href="#contacts" className="hover:text-primary">Contact</a>
 
                         <div className="flex items-center gap-3">
                             <SignInButton mode="modal">
@@ -51,9 +51,9 @@ const Navbar = () => {
 
                 {/* Mobile Menu */}
                 <div className={`${open ? 'flex' : 'hidden'} absolute top-15 left-0 w-full bg-[#121022] shadow-md py-4 flex-col items-start gap-2 px-5 text-sm sm:hidden`}>
-                    <a href="/" className="block">Home</a>
-                    <a href="#features" className="block">Features</a>
-                    <a href="#contacts" className="block">Contact</a>
+                    <a href="/" className="block hover:text-primary">Home</a>
+                    <a href="#features" className="block hover:text-primary">Features</a>
+                    <a href="#contacts" className="block hover:text-primary">Contact</a>
                     <div className="flex items-center gap-2">
                         <SignInButton mode="modal">
                             <div className="cursor-pointer px-6 py-2 mt-2 bg-gray-500 hover:bg-gray-600 transition text-white rounded-full text-sm">

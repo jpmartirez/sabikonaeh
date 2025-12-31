@@ -95,7 +95,7 @@ const SummarizePage = () => {
               sentence="AI TEXT SUMMARIZER"
               manualMode={false}
               blurAmount={5}
-              borderColor="purple"
+              borderColor="blue"
               animationDuration={0.5}
               pauseBetweenAnimations={0.8}
               />
