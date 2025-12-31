@@ -3,6 +3,7 @@ import { useState } from "react"
 import toast from "react-hot-toast";
 import axios from 'axios'
 import ReactMarkdown from 'react-markdown'
+import TrueFocus from "../components/animation/TrueFocus";
 
 const SummarizePage = () => {
 
@@ -89,8 +90,15 @@ const SummarizePage = () => {
       {/* PARAPHRASE */}
       <div className="  w-full flex-1 flex flex-col gap-4">
         <div className="max-w-354 mx-auto w-full space-y-4 mb-4">
-          <div className="text-lg sm:text-xl lg:text-3xl font-semibold">
-            AI TEXT SUMMARIZER
+          <div className="text-lg sm:text-xl lg:text-3xl font-semibold flex justify-start">
+            <TrueFocus 
+              sentence="AI TEXT SUMMARIZER"
+              manualMode={false}
+              blurAmount={5}
+              borderColor="purple"
+              animationDuration={0.5}
+              pauseBetweenAnimations={0.8}
+              />
           </div>
 
           <div className="text-gray-400">
