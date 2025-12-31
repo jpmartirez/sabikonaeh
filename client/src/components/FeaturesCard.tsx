@@ -5,11 +5,13 @@ const colors = {
     purple: "bg-purple-600/60"
 }
 
+type ColorType = keyof typeof colors;
+
 type Cardprops = {
     icon: LucideIcon,
-    name: String,
-    description: String,
-    color: String,
+    name: string,
+    description: string,
+    color: ColorType,
 }
 
 const FeaturesCard = ({icon: Icon, name, description, color}: Cardprops) => {

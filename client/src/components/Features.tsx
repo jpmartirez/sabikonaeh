@@ -1,7 +1,14 @@
 import { ArrowLeftRight, NotebookText } from "lucide-react"
 import FeaturesCard from "./FeaturesCard"
 
-const cards = [
+type CardData = {
+  color: 'blue' | 'purple';
+  icon: typeof NotebookText;
+  name: string;
+  description: string;
+}
+
+const cards: CardData[] = [
   {
     color: "blue",
     icon: NotebookText,
