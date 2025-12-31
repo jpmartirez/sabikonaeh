@@ -18,7 +18,7 @@ const cards = [
 
 const Features = () => {
   return (
-    <div className="p-14 flex flex-col space-y-4 items-center w-full ">
+    <div className="p-14 flex flex-col space-y-4 items-center w-full " id="features">
         <div><p className="text-blue-700 font-bold text-md md:text-xl">Features</p></div>
         <div>
             <p className="text-lg md:text-xl lg:text-3xl font-bold">Power Up Your Writing</p>
@@ -31,7 +31,7 @@ const Features = () => {
 
         <div className="flex items-center justify-center flex-wrap gap-10">
           {cards.map(card => (
-            <FeaturesCard icon={card.icon} name={card.name} description={card.description} color={card.color}/>
+            <FeaturesCard key={card.name} icon={card.icon} name={card.name} description={card.description} color={card.color}/>
           ))}
         </div>
     </div>
