@@ -6,7 +6,7 @@ import Teams from "../components/Teams"
 
 const Homepage = () => {
   return (
-    <div>
+    <div className="scroll-smooth">
         <Hero/>
         <Teams/>
         <Features/>

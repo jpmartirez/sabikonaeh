@@ -1,5 +1,6 @@
 import { BadgeCheck, Play } from "lucide-react"
 import TextType from "./animation/TextType"
+import { SignUpButton } from "@clerk/clerk-react"
 
 const Hero = () => {
   return (
@@ -26,7 +27,11 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col md:flex-row items-center gap-3">
-                <button className="btn btn-primary">Try for Free</button>
+                <SignUpButton mode="modal">
+                    <div className="btn btn-primary">
+                        Try for Free
+                    </div>
+                </SignUpButton>
                 <button className="btn btn-soft flex items-center gap-2"><Play width={16}/>View Demo</button>
             </div>
 

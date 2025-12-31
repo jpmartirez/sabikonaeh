@@ -25,7 +25,7 @@ const Teams = () => {
 
     ]
   return (
-    <div className="py-7 w-full mx-auto bg-black border-t border-b border-gray-700">
+    <div className="p-7 w-full mx-auto bg-black border-t border-b border-gray-700">
         <div className="text-center mb-5"> 
             <p className="font-bold text-md md:text-xl">TRUSTED INNOVATIVE TEAMS AT</p>
         </div>

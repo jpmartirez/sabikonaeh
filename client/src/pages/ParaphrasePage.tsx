@@ -2,6 +2,7 @@ import { Clipboard, Copy, RotateCcw, Sparkles, Trash } from "lucide-react";
 import { useState } from "react"
 import toast from "react-hot-toast";
 import axios from 'axios'
+import ReactMarkdown from 'react-markdown'
 
 const ParaphrasePage = () => {
 
@@ -71,6 +72,7 @@ const ParaphrasePage = () => {
   const getResult = async ()=>{
 
       isLoading(true);
+      setParaphrased("")
     
       const prompt = `Paraphrase the following text with a ${tone.toLowerCase()} tone
         and ${intensityToText(range)} rephrasing intensity.
@@ -82,25 +84,26 @@ const ParaphrasePage = () => {
       setParaphrased(data.result);
 
       isLoading(false);
-
   }
 
   return (
     <div className="flex flex-col min-h-screen bg-[#121022] p-5 md:p-10">
       {/* PARAPHRASE */}
       <div className="  w-full flex-1 flex flex-col gap-4">
-        <div className="text-lg sm:text-xl lg:text-3xl font-semibold">
-          PARAPHRASING TOOL
-        </div>
+        <div className="max-w-354 w-full mx-auto space-y-4 mb-4">
+          <div className="text-lg sm:text-xl lg:text-3xl font-semibold">
+            PARAPHRASING TOOL
+          </div>
 
-        <div className="text-gray-400">
-          Transform your text with AI-powered rewriting. Choose your preferred tone <br /> and intensity to get the perfect result.
+          <div className="text-gray-400">
+            Transform your text with AI-powered rewriting. Choose your preferred tone <br /> and intensity to get the perfect result.
+          </div>
         </div>
 
         {/* PARAPHRASE CONFIG */}
-        <div className="flex flex-wrap items-center justify-center  md:justify-between w-full gap-5 sm:gap-7 md:gap-10 lg:gap-20 p-5 bg-[#1A1A1E] border border-gray-500/70 rounded-xl ">
-          <div className="">
-            <p>Tone</p>
+        <div className="flex flex-wrap items-center justify-center  md:justify-between w-full max-w-354 mx-auto gap-5 sm:gap-7 md:gap-10 lg:gap-20 p-5 bg-[#1A1A1E] border border-gray-500/70 rounded-xl ">
+          <div className="flex flex-col items-center gap-2">
+            <p className="text-gray-400 font-semibold">TONE</p>
             <select defaultValue="Standard" value={tone} onChange={e => setTone(e.target.value)} className="select select-info">
               <option disabled={true}>Pick a Tone</option>
               <option>Standard</option>
@@ -111,7 +114,7 @@ const ParaphrasePage = () => {
           
           <div className="flex-1 flex flex-col gap-2">
               <div className="flex items-center justify-between">
-                <p className="text-sm md:text-lg">REPHRASING INTENSITY</p>
+                <p className="text-sm md:text-lg font-semibold text-gray-400">REPHRASING INTENSITY</p>
                 <div className="badge badge-outline badge-info">Significant</div>
               </div>
 
@@ -159,13 +162,13 @@ const ParaphrasePage = () => {
                 </div>
               </div>
 
-              <div className="h-72 bg-[#1a3b61] overflow-hidden overflow-y-scroll">
+              <div className={`${paraphrased=="" ? "h-72" : "h-auto"} bg-[#1a3b61] overflow-hidden overflow-y-scroll`}>
                 {loading? (
                   <div className="flex items-center justify-center h-full">
                     <span className="loading loading-spinner text-primary"></span>
                   </div>
                 ): (
-                  <p className="p-3 text-lg">{paraphrased}</p>
+                  <p className="p-3 text-lg"><ReactMarkdown>{paraphrased}</ReactMarkdown></p>
                 )}
               </div>
 
